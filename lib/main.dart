@@ -32,16 +32,23 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text('Flutter Widget Resource'),
         centerTitle: true,
       ),
-      body: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints){
-          if(constraints.maxWidth > 600){
-            return Container(height: 400, width: 400, color: Colors.greenAccent,);
-          }
-          else{
-            return Container(height: 200, width: 200, color: Colors.greenAccent,);
-          }
-        },
-      ),
+      body:  SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        //scrollDirection: Axis.horizontal,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(height: 200, width: 200, color: Colors.greenAccent,),
+            Container(height: 200, width: 200, color: Colors.orange,),
+            Container(height: 200, width: 200, color: Colors.blueAccent,),
+            Container(height: 200, width: 200, color: Colors.deepOrange,),
+            Container(height: 200, width: 200, color: Colors.brown,),
+            Container(height: 200, width: 200, color: Colors.black,),
+            Container(height: 200, width: 200, color: Colors.amber,),
+            Container(height: 200, width: 200, color: Colors.deepPurple,),
+          ],
+        ),
+      )
     );
   }
 }
