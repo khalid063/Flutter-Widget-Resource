@@ -32,15 +32,12 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text('Flutter Widget Resource'),
         centerTitle: true,
       ),
-      body: Container(
-        width: double.infinity,   /// for getting full width
-        height: 300,
-        color: Colors.orange,
-        alignment: Alignment.center,
-        child: AspectRatio(
-          aspectRatio: 16/9,    /// length/width
+      body: Center(
+        child: FractionallySizedBox(
+          widthFactor: 0.5,             /// full width = 1
+          heightFactor: 0.3,            /// full height = 1
           child: Container(
-            color: Colors.cyanAccent,
+            color: Colors.orange,
           ),
         ),
       ),
