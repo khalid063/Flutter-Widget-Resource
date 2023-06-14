@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_resource/style.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,9 +30,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
 
-    var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
-    var orientation = MediaQuery.of(context).orientation;
+    //var width = MediaQuery.of(context).size.width;
+    // var height = MediaQuery.of(context).size.height;
+    // var orientation = MediaQuery.of(context).orientation;
 
     return Scaffold(
       appBar: AppBar(
@@ -41,9 +42,10 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Screen Width = ${width}'),
-          Text('Screen Height = ${height}'),
-          Text('Screen Orientation = ${orientation}'),
+          Text('Hellow Flutter', style: HeadLine(context),),
+          // Text('Screen Width = ${width}'),
+          // Text('Screen Height = ${height}'),
+          // Text('Screen Orientation = ${orientation}'),
         ],
       ),
     );
