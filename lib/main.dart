@@ -35,23 +35,24 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Expanded(
+          Flexible(
+            fit: FlexFit.tight,    /// expend ar soman spacce nibe, ata Expanded a default kore, flexible theke e Expended asese...
             flex: 1,
               child: Container(color: Colors.amber,)
           ),
-          Expanded(
+          Flexible(
             flex: 2,
               child: Container(color: Colors.blue,)
           ),
-          Expanded(
+          Flexible(
             flex: 3,
               child: Container(color: Colors.greenAccent,)
           ),
-          Expanded(
+          Flexible(
             flex: 4,
               child: Container(color: Colors.black,)
           ),
-          Expanded(
+          Flexible(
             flex: 1,
               child: Container(color: Colors.red,)
           ),
