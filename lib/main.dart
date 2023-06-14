@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_resource/style.dart';
+import 'package:responsive_grid/responsive_grid.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,14 +40,69 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text('Flutter Widget Resource'),
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text('Hellow Flutter', style: HeadLine(context),),
-          // Text('Screen Width = ${width}'),
-          // Text('Screen Height = ${height}'),
-          // Text('Screen Orientation = ${orientation}'),
-        ],
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: ResponsiveGridRow(
+          children: [
+            ResponsiveGridCol(
+              //lg: 12,
+                xl:4, lg: 6, md:8, sm:9, xs:12,
+                child: Container(
+                  height: 50,           ///*** width dite hobe na...
+                  color: Colors.teal,
+                )
+            ),
+            ResponsiveGridCol(
+              xl:4, lg: 6, md:8, sm:9, xs:12,
+                child: Container(
+                  height: 50,           ///*** width dite hobe na...
+                  color: Colors.brown,
+                )
+            ),
+            ResponsiveGridCol(
+              xl:4, lg: 6, md:8, sm:9, xs:12,
+                child: Container(
+                  height: 50,           ///*** width dite hobe na...
+                  color: Colors.greenAccent,
+                )
+            ),
+            ResponsiveGridCol(
+                xl:4, lg: 6, md:8, sm:9, xs:12,
+                child: Container(
+                  height: 50,           ///*** width dite hobe na...
+                  color: Colors.cyanAccent,
+                )
+            ),
+            ResponsiveGridCol(
+                xl:4, lg: 6, md:8, sm:9, xs:12,
+                child: Container(
+                  height: 50,           ///*** width dite hobe na...
+                  color: Colors.blueAccent,
+                )
+            ),
+            ResponsiveGridCol(
+                xl:4, lg: 6, md:8, sm:9, xs:12,
+                child: Container(
+                  height: 50,           ///*** width dite hobe na...
+                  color: Colors.lightGreen,
+                )
+            ),
+            ResponsiveGridCol(
+                xl:4, lg: 6, md:8, sm:9, xs:12,
+                child: Container(
+                  height: 50,           ///*** width dite hobe na...
+                  color: Colors.brown,
+                )
+            ),
+            ResponsiveGridCol(
+                xl:4, lg: 6, md:8, sm:9, xs:12,
+                child: Container(
+                  height: 50,           ///*** width dite hobe na...
+                  color: Colors.amber,
+                )
+            ),
+          ],
+        ),
       ),
     );
   }
