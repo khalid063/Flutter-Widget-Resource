@@ -25,37 +25,25 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
   @override
   Widget build(BuildContext context) {
+
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
+    var orientation = MediaQuery.of(context).orientation;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Widget Resource'),
         centerTitle: true,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Flexible(
-            fit: FlexFit.tight,    /// expend ar soman spacce nibe, ata Expanded a default kore, flexible theke e Expended asese...
-            flex: 1,
-              child: Container(color: Colors.amber,)
-          ),
-          Flexible(
-            flex: 2,
-              child: Container(color: Colors.blue,)
-          ),
-          Flexible(
-            flex: 3,
-              child: Container(color: Colors.greenAccent,)
-          ),
-          Flexible(
-            flex: 4,
-              child: Container(color: Colors.black,)
-          ),
-          Flexible(
-            flex: 1,
-              child: Container(color: Colors.red,)
-          ),
+          Text('Screen Width = ${width}'),
+          Text('Screen Height = ${height}'),
+          Text('Screen Orientation = ${orientation}'),
         ],
       ),
     );
