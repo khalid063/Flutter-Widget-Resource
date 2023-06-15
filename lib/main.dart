@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widget_resource/style.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -28,81 +27,33 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
+  int countNumber = 0;
+
   @override
   Widget build(BuildContext context) {
-
-    //var width = MediaQuery.of(context).size.width;
-    // var height = MediaQuery.of(context).size.height;
-    // var orientation = MediaQuery.of(context).orientation;
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Widget Resource'),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: ResponsiveGridRow(
-          children: [
-            ResponsiveGridCol(
-              //lg: 12,
-                xl:4, lg: 6, md:8, sm:9, xs:12,
-                child: Container(
-                  height: 50,           ///*** width dite hobe na...
-                  color: Colors.teal,
-                )
-            ),
-            ResponsiveGridCol(
-              xl:4, lg: 6, md:8, sm:9, xs:12,
-                child: Container(
-                  height: 50,           ///*** width dite hobe na...
-                  color: Colors.brown,
-                )
-            ),
-            ResponsiveGridCol(
-              xl:4, lg: 6, md:8, sm:9, xs:12,
-                child: Container(
-                  height: 50,           ///*** width dite hobe na...
-                  color: Colors.greenAccent,
-                )
-            ),
-            ResponsiveGridCol(
-                xl:4, lg: 6, md:8, sm:9, xs:12,
-                child: Container(
-                  height: 50,           ///*** width dite hobe na...
-                  color: Colors.cyanAccent,
-                )
-            ),
-            ResponsiveGridCol(
-                xl:4, lg: 6, md:8, sm:9, xs:12,
-                child: Container(
-                  height: 50,           ///*** width dite hobe na...
-                  color: Colors.blueAccent,
-                )
-            ),
-            ResponsiveGridCol(
-                xl:4, lg: 6, md:8, sm:9, xs:12,
-                child: Container(
-                  height: 50,           ///*** width dite hobe na...
-                  color: Colors.lightGreen,
-                )
-            ),
-            ResponsiveGridCol(
-                xl:4, lg: 6, md:8, sm:9, xs:12,
-                child: Container(
-                  height: 50,           ///*** width dite hobe na...
-                  color: Colors.brown,
-                )
-            ),
-            ResponsiveGridCol(
-                xl:4, lg: 6, md:8, sm:9, xs:12,
-                child: Container(
-                  height: 50,           ///*** width dite hobe na...
-                  color: Colors.amber,
-                )
-            ),
-          ],
+      body: Center(
+        child: Text(
+          countNumber.toString(),
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.red
+          ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: (){
+
+          setState(() {
+            countNumber = countNumber + 1;
+          });
+            print("$countNumber");
+        },
       ),
     );
   }
